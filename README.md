@@ -1,2 +1,2 @@
-# boiler-plate-react-redux
-Boiler Plate React Redux for Palo-IT
+# boilerplate-react-redux
+Boilerplate React Redux for Palo-IT
