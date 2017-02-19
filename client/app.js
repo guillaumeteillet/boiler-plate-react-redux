@@ -1,21 +1,25 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute } from 'react-router'
+import { Provider } from 'react-redux'
 
 import css from './styles/general.css'
 
-import Main from './pages/Main'
+import store, { history } from './store'
+import App from './components/App';
 import Homepage from './pages/Homepage'
 import Page1 from './pages/Page1'
 
 const router = (
-  <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={Homepage}></IndexRoute>
-      <Route path="/page1" component={Page1}></Route>
-      <Route path="/page1/:paramGet" component={Page1}></Route>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Homepage}></IndexRoute>
+        <Route path="/page1" component={Page1}></Route>
+        <Route path="/page1/:paramGet" component={Page1}></Route>
+      </Route>
+    </Router>
+  </Provider>
 )
 
 render(router, document.getElementById('root'))
