@@ -7,7 +7,8 @@ const Menu = React.createClass({
       <div className="menu">
         <Link to="/">Homepage</Link> -
         <Link to="/page1"> Page 1</Link> -
-        <Link to="/page1/withParams"> Page 1</Link>
+        <Link to="/page1/withParams"> Page 1</Link> -
+        <Link to="/api"> Api</Link>
       </div>
     )
   }

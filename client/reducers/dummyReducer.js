@@ -1,16 +1,16 @@
-function dummyData(state = [], action) {
-  switch(action.type) {
+function dummyData (state = [], action) {
+  switch (action.type) {
     case 'INCREMENT_COUNTER' :
-      console.log("Incrementing COUNTER!!");
-      const i = action.index;
+      console.log('Incrementing COUNTER!!')
+      const i = action.index
       return [
-        ...state.slice(0,i),
+        ...state.slice(0, i),
         {...state[i], counter: state[i].counter + 1},
-        ...state.slice(i + 1),
+        ...state.slice(i + 1)
       ]
     default:
-      return state;
+      return state
   }
 }
 
-export default dummyData;
+export default dummyData
